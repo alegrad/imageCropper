@@ -1,0 +1,27 @@
+<div class="col-md-8 col-md-offset-2">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <img ng-src="{{'/uploads/' + fileName}}" width="350px" class="cropped-img">
+            <br>
+            <a ng-href="{{'/uploads/' + fileName}}" target="_blank">View Cropped image</a><span>. It will be available for 3 days</span><br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <button class="btn btn-info btn-file download-button" ng-click="download()">Download</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+
+            <input type="text" class="form-control" ng-model="twitterName" id="twitterName" name="twitterName"
+                   placeholder="Enter Twitter Name To Share">
+            <button class="btn btn-success btn-file share-button" ng-click="share()"
+                    ng-disabled="twitterName==undefined || twitterName.length==0">Share via Twitter
+            </button>
+        </div>
+    </div>
+
+</div>

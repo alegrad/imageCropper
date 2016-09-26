@@ -1,0 +1,15 @@
+<div class="col-md-8 col-md-offset-2">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <label class="btn btn-primary btn-file choose-button">
+                <input type="file" file-input="image" onchange="angular.element(this).scope().imageUpload(event)"
+                       name="image"
+                       style="display: none;">Choose Image
+            </label>
+            <div class="image-container" ng-show="imgSrc"></div>
+
+            <button class="btn btn-info btn-file crop-button" ng-show="imgSrc" ng-click="crop()">Crop</button>
+        </div>
+    </div>
+</div>
+
